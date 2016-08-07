@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>84ws. A collection of tools for gathering information.</title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body ng-app="efapp" ng-controller="searchController">
+    <div class="container">
+      <form>
+        <div class="form-group">
+          <div class="text-center">
+            <h1>84ws</h1>
+            <p>A collection of tools for gathering information.</p>
+            <input type="text" name="q" id="q" class="form-control" value="" required="required" ng-model="q" autofocus>
+          </div>
+        </div>
+        <div class="text-center">
+          <button type="button" class="btn btn-primary" ng-disabled="!q" ng-click="searchNow(q)">Search</button>
+          <button type="button" class="btn btn-default" ng-click="searchLucky(q)">I'm feeling lucky</button>
+          <button type="button" class="btn btn-default" ng-click="searchParanoid(q)">I'm feeling paranoid</button>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="checkbox">
+                <label><input type="checkbox" disabled="" title="Not yet"><strike>All</strike> - No jet</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" disabled="" title="Not yet"><strike>Your Brain</strike> - Comming soon</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox">Your Home - <a href="https://www.google.com.pe/maps/timeline?hl=en" target="_blank">Check your Google Timeline</a></label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox">Family - <a href="http://search.fb.com/" target="_blank">Learn about Facebook Search</a></label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox">Friends - <a href="http://search.fb.com/" target="_blank">Search with Facebook</a></label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox">Ex-Friends - <a href="https://pipl.com/" target="_blank">Search with Pipl</a></label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox">Relatives - <a href="https://pipl.com/" target="_blank">Find relation with Pipl</a></label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox">Co_workers - <a href="https://www.linkedin.com/search" target="_blank">Use Advanced People Search with Linkedin</a></label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox">Ex-spouse(s) - <a href="http://search.fb.com/" target="_blank">Learn about Facebook Search</a></label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox">Enemys - <a href="http://search.fb.com/" target="_blank">Learn about Facebook Search</a></label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="checkbox">
+                <label><input type="checkbox">Satellite Photos of People You Want to Spy - <a href="https://support.google.com/plus/answer/3302509?hl=en" target="_blank">See friends' locations on a map with Android</a></label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox">Satellite Photos of People Spying on You - <a href="https://support.google.com/plus/answer/3302509?hl=en" target="_blank">See friends' locations on a map with Android</a></label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" disabled="" title="Not yet"><strike>Medical Records</strike></label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" disabled="" title="Not yet"><strike>Credit Reports</strike></label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" disabled="" title="Not yet"><strike>Tax Records</strike></label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox">Phone Records - <a href="http://www.wikihow.com/Get-Cell-Phone-Records" target="_blank">Learn How to Get Cell Phone records</a></label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" disabled="" title="Not yet"><strike>Court Documents</strike></label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" disabled="" title="Not yet">Other People's Conversations - <a href="http://www.wikihow.com/Access-Someone-Else's-WhatsApp-Account" target="_blank">Learn How to Access Someone Else's WhatsApp Account</a></label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="checkbox">
+                <label><input type="checkbox">Books - <a href="https://books.google.com/" target="_blank">books.google.com</a></label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox">Movies - <a href="https://www.youtube.com" target="_blank">youtube.com</a> | <a href="https://www.netflix.com" target="_blank">Netflix</a></label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox">TV Shows - <a href="https://www.youtube.com" target="_blank">youtube.com</a></label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox">Music - <a href="https://www.youtube.com" target="_blank">youtube.com</a></label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox">PArn (+18) - &infin; sites. You don't need help</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox">Your Past - <a href="https://myactivity.google.com/myactivity" target="_blank">Check your Google History Search</a></label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox"><strike>Your Present - <a href="">Check your Twitter state</a> | <a href="">Check your Instagram account</a> | <a href="">Check your Snapchat</a></strike> (Check your favorite social network)</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" disabled="" title="Not yet"><strike>Your Future</strike> - Comming soon</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2>Interested in more?</h2>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="checkbox">
+                <label><input type="checkbox">Exposed Online Devices - <a href="https://www.shodan.io/" target="_blank">Shodan</a> | <a href="https://www.zoomeye.org/" target="_blank">ZoomEye</a></label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox">Network Tools - <a href="http://mxtoolbox.com/" target="_blank">MXtoolbox</a></label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox">Exploits - <a href="https://www.exploit-db.com/search/" target="_blank">Exploit Database</a></label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="checkbox">
+                <label><input type="checkbox" disabled=""><strike>Deep Web</strike> - Comming soon?</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="checkbox">
+                <label><input type="checkbox" disabled=""><strike>Pokemon Go Map Search</strike> - Comming soon, maybe<a href=""></a></strike></label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox">Rare diseases - <a href="http://findzebra.compute.dtu.dk/" target="_blank">Check FindZebra</a></strike></label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      </div><!-- /.container -->
+      <!-- script references -->
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+      <script type="text/javascript" src="app/main.js"></script>
+    </body>
+  </html>
